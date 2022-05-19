@@ -1,6 +1,7 @@
 // IMPORT MODULES under test here:
 import { 
     addAllAges,
+    getAverageCoolFactor,
     getTotalOfEachGender,
     greetUsers,
     greetUsersOverAge60,
@@ -97,11 +98,10 @@ test('addAllAges', (expect) => {
     expect.equal(actual, expected);
 });
 
+test('getAverageCoolFactor', (expect) => {
+    const expected = 5.088888888888889;
 
-skip('getAverageCoolFactor', (expect) => {
-    const expected = true;
-
-    const actual = true;
+    const actual = getAverageCoolFactor(customers);
 
     expect.equal(actual, expected);
 });
