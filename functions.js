@@ -106,8 +106,20 @@ Output:
 */
 
 export function getGenderBreakdownOfEachCar(customers) {
-    return true;
-}
+    // Go through and get each car make, 
+    // and count the each gender that owns that car
+    const carsAndGenders = customers.map((customer) =>({
+        car_make: customer.car_make,
+        gender: customer.gender
+    }));       
+    const genderCount = carsAndGenders.reduce((acc, carsAndGender) => {
+        if(!acc[carsAndGender.gender]){
+            acc[carsAndGender.gender] = 1;
+        } else {
+            acc[carsAndGender.gender]++;
+        }
+    });
+    return genderCount; }
 
 /* 
 Output: 
@@ -121,7 +133,14 @@ Output:
 
 
 export function getAllCoolFactorsOfEachCar(customers) {
-    return true;
+    return customers.reduce((cool_factor, gender) => cool_factor,)
+        .reduce((cool_factor, car_make) => {
+            if(cool_factor[car_make]){
+                cool_factor[car_make]++;
+            } else {
+                cool_factor[car_make];
+            }
+        });
 }
 
 /////////////////////////////// STRETCH GOALS ///////////////////////////////////////
