@@ -106,20 +106,11 @@ Output:
 */
 
 export function getGenderBreakdownOfEachCar(customers) {
-    // Go through and get each car make, 
-    // and count the each gender that owns that car
-    const carsAndGenders = customers.map((customer) =>({
-        car_make: customer.car_make,
-        gender: customer.gender
-    }));       
-    const genderCount = carsAndGenders.reduce((acc, carsAndGender) => {
-        if(!acc[carsAndGender.gender]){
-            acc[carsAndGender.gender] = 1;
-        } else {
-            acc[carsAndGender.gender]++;
-        }
-    });
-    return genderCount; }
+    return customers.reduce((a, c) => {
+        if()
+    })
+    
+}
 
 /* 
 Output: 

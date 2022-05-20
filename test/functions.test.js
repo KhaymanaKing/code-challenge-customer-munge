@@ -140,7 +140,7 @@ test('getGenderBreakdownOfEachCar', (expect) => {
     const expected = {};
 
     const actual = getGenderBreakdownOfEachCar(customers);
-
+    
     expect.equal(actual, expected);
 });
 
