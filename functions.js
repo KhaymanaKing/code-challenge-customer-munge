@@ -106,10 +106,17 @@ Output:
 */
 
 export function getGenderBreakdownOfEachCar(customers) {
-    return customers.reduce((a, c) => {
-        if()
-    })
-    
+    return customers.reduce((acc, customer) => {
+        if(acc[customer.car_make]){
+            customer.reduce((acc, customer) =>{
+                if(acc[customer.gender]){
+                    acc[customer.gender]++;
+                } else 
+                {acc[customer.gender];
+                }
+            });
+        } else acc[customer.car_make] = {};
+    }, {});
 }
 
 /* 
