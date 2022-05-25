@@ -108,11 +108,16 @@ Output:
 export function getGenderBreakdownOfEachCar(customers) {
     return customers.reduce((acc, customer) => {
         if(acc[customer.car_make]){
-            (acc[customer.car_make][customer.gender]);
-            acc[customer.gender]++;
+            if(acc[customer.car_make][customer.gender]){
+                acc[customer.car_make][customer.gender]++;}
+            else { acc[customer.car_make][customer.gender] = 1;}    
         } else {
-            acc[customer.car_make] = {};
+            acc[customer.car_make] = { };
+            if(acc[customer.car_make][customer.gender]){
+                acc[customer.car_make][customer.gender]++;}
+            else { acc[customer.car_make][customer.gender] = 1;}
         }
+        return acc;
     }, {});
         
 }
@@ -129,14 +134,20 @@ Output:
 
 
 export function getAllCoolFactorsOfEachCar(customers) {
-    return customers.reduce((cool_factor, gender) => cool_factor,)
-        .reduce((cool_factor, car_make) => {
-            if(cool_factor[car_make]){
-                cool_factor[car_make]++;
-            } else {
-                cool_factor[car_make];
-            }
-        });
+    return customers.reduce((acc, customer) => {
+        if(acc[customer.car_make]){
+            if(acc[customer.car_make][customer.cool_factor]){
+                acc[customer.car_make][customer.cool_factor]++;}
+            else { acc[customer.car_make][customer.cool_factor] = 1;}    
+        } else {
+            acc[customer.car_make] = { };
+            if(acc[customer.car_make][customer.cool_factor]){
+                acc[customer.car_make][customer.cool_factor]++;}
+            else { acc[customer.car_make][customer.cool_factor] = 1;}
+        }
+        return acc;
+    }, {});
+   
 }
 
 /////////////////////////////// STRETCH GOALS ///////////////////////////////////////

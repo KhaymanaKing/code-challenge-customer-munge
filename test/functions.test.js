@@ -136,20 +136,213 @@ test('getGenderBreakdownOfFordOwners', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('getGenderBreakdownOfEachCar', (expect) => {
-    const expected = {};
+test('getGenderBreakdownOfEachCar', (expect) => {
+    const expected = {
+        'Alfa Romeo': {
+            'Male': 1
+        },
+        'Audi': {
+            'Female': 1
+        },
+        'BMW': {
+            'Male': 1
+        },
+        'Buick': {
+            'Female': 1,
+            'Male': 1
+        },
+        'Cadillac': {
+            'Male': 1,
+            'Non-binary': 1
+        },
+        'Chevrolet': {
+            'Female': 1,
+            'Male': 3
+        },
+        'Chrysler': {
+            'Female': 1,
+            'Genderqueer': 1
+        },
+        'Dodge': {
+            'Female': 2,
+            'Male': 1
+        },
+        'Eagle': {
+            'Male': 1
+        },
+        'Ford': {
+            'Female': 1,
+            'Male': 2
+        },
+        'GMC': {
+            'Female': 2,
+            'Male': 2
+        },
+        'Infiniti': {
+            'Female': 1
+        },
+        'Jeep': {
+            'Female': 1
+        },
+        'Kia': {
+            'Male': 1
+        },
+        'Lexus': {
+            'Male': 1
+        },
+        'Mazda': {
+            'Male': 1
+        },
+        'Mercedes-Benz': {
+            'Female': 1
+        },
+        'Mercury': {
+            'Male': 1
+        },
+        'Mitsubishi': {
+            'Male': 1
+        },
+        'Oldsmobile': {
+            'Male': 1
+        },
+        'Peugeot': {
+            'Female': 1
+        },
+        'Pontiac': {
+            'Female': 1
+        },
+        'Porsche': {
+            'Female': 1,
+            'Male': 1
+        },
+        'Scion': {
+            'Female': 1
+        },
+        'Subaru': {
+            'Female': 1
+        },
+        'Toyota': {
+            'Bigender': 1,
+            'Female': 1,
+            'Male': 2
+        },
+        'Volvo': {
+            'Female': 1,
+            'Male': 1
+        }
+    };
 
     const actual = getGenderBreakdownOfEachCar(customers);
     
-    expect.equal(actual, expected);
+    expect.deepEqual(actual, expected);
 });
 
-skip('getAllCoolFactorsOfEachCar', (expect) => {
-    const expected = {};
+test('getAllCoolFactorsOfEachCar', (expect) => {
+    const expected = 	
+    {
+        'Alfa Romeo': {
+            '6': 1
+        },
+        'Audi': {
+            '1': 1
+        },
+        'BMW': {
+            '5': 1
+        },
+        'Buick': {
+            '3': 1,
+            '4': 1
+        },
+        'Cadillac': {
+            '1': 1,
+            '7': 1
+        },
+        'Chevrolet': {
+            '1': 1,
+            '2': 1,
+            '8': 1,
+            '9': 1
+        },
+        'Chrysler': {
+            '4': 1,
+            '9': 1
+        },
+        'Dodge': {
+            '10': 2,
+            '8': 1
+        },
+        'Eagle': {
+            '9': 1
+        },
+        'Ford': {
+            '10': 1,
+            '2': 1,
+            '5': 1
+        },
+        'GMC': {
+            '10': 1,
+            '6': 2,
+            '8': 1
+        },
+        'Infiniti': {
+            '2': 1
+        },
+        'Jeep': {
+            '5': 1
+        },
+        'Kia': {
+            '2': 1
+        },
+        'Lexus': {
+            '4': 1
+        },
+        'Mazda': {
+            '3': 1
+        },
+        'Mercedes-Benz': {
+            '3': 1
+        },
+        'Mercury': {
+            '2': 1
+        },
+        'Mitsubishi': {
+            '4': 1
+        },
+        'Oldsmobile': {
+            '5': 1
+        },
+        'Peugeot': {
+            '1': 1
+        },
+        'Pontiac': {
+            '8': 1
+        },
+        'Porsche': {
+            '7': 1,
+            '8': 1
+        },
+        'Scion': {
+            '2': 1
+        },
+        'Subaru': {
+            '2': 1
+        },
+        'Toyota': {
+            '1': 1,
+            '2': 1,
+            '3': 1,
+            '8': 1
+        },
+        'Volvo': {
+            '4': 1,
+            '9': 1
+        }
+    };	
+    
 
     const actual = getAllCoolFactorsOfEachCar(customers);
 
-    expect.equal(actual, expected);
+    expect.deepEqual(actual, expected);
 
 });
 
